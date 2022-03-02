@@ -234,7 +234,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeHorizontal.png')
+                        image: createImage('./images/pipeHorizontal.png')
                     })
                 )
                 break
@@ -245,7 +245,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeVertical.png')
+                        image: createImage('./images/pipeVertical.png')
                     })
                 )
                 break
@@ -256,7 +256,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeCorner1.png')
+                        image: createImage('./images/pipeCorner1.png')
                     })
                 )
                 break
@@ -267,7 +267,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeCorner2.png')
+                        image: createImage('./images/pipeCorner2.png')
                     })
                 )
                 break
@@ -278,7 +278,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeCorner3.png')
+                        image: createImage('./images/pipeCorner3.png')
                     })
                 )
                 break
@@ -289,7 +289,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeCorner4.png')
+                        image: createImage('./images/pipeCorner4.png')
                     })
                 )
                 break
@@ -300,7 +300,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/block.png')
+                        image: createImage('./images/block.png')
                     })
                 )
                 break
@@ -311,7 +311,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/capLeft.png')
+                        image: createImage('./images/capLeft.png')
                     })
                 )
                 break
@@ -322,7 +322,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/capRight.png')
+                        image: createImage('./images/capRight.png')
                     })
                 )
                 break
@@ -333,7 +333,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/capBottom.png')
+                        image: createImage('./images/capBottom.png')
                     })
                 )
                 break
@@ -344,7 +344,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/capTop.png')
+                        image: createImage('./images/capTop.png')
                     })
                 )
                 break
@@ -355,7 +355,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeCross.png')
+                        image: createImage('./images/pipeCross.png')
                     })
                 )
                 break
@@ -366,7 +366,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeConnectorTop.png')
+                        image: createImage('./images/pipeConnectorTop.png')
                     })
                 )
                 break
@@ -377,7 +377,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeConnectorRight.png')
+                        image: createImage('./images/pipeConnectorRight.png')
                     })
                 )
                 break
@@ -388,7 +388,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeConnectorBottom.png')
+                        image: createImage('./images/pipeConnectorBottom.png')
                     })
                 )
                 break
@@ -399,7 +399,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('../images/pipeConnectorLeft.png')
+                        image: createImage('./images/pipeConnectorLeft.png')
                     })
                 )
                 break    
@@ -410,7 +410,7 @@ map.forEach((row, i) => {
                             x: Maze.width * j + Maze.width/2,
                             y: Maze.height * i + Maze.height/2
                             },
-                            image: createImage('../images/candy.png')
+                            image: createImage('./images/candy.png')
                         })
                     )
                     break 
