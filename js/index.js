@@ -10,25 +10,6 @@ let playerFrame = 0
 let playerDirection = 'right'
 let playerState = 'idle'
 
-
-// const playerWalkDown = new Image();
-// playerWalkDown.src = '../images/ash_sprite_down.png';
-// const playerWalkUp = new Image();
-// playerWalkUp.src = '../images/ash_sprite_up.png';
-// const playerWalkLeft = new Image();
-// playerWalkLeft.src = '../images/ash_sprite_left.png';
-// const playerWalkRight = new Image();
-// playerWalkRight.src = '../images/ash_sprite_right.png';
-// const playerIdleRight = new Image();
-// playerIdleRight.src = '../images/ash_idle_right.png';
-// const playerIdleLeft = new Image();
-// playerIdleLeft.src = '../images/ash_idle_left.png';
-// const playerIdleUp = new Image();
-// playerIdleUp.src = '../images/ash_idle_up.png';
-// const playerIdleDown = new Image();
-// playerIdleDown.src = '../images/ash_idle_down.png'
-
-
 class Maze {
     static width = 40 // using static property so i dont have to created new object and make the values easier to read in the future or by someone else
     static height = 40
