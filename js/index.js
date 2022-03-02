@@ -759,3 +759,4 @@ document.addEventListener('keyup', (event) => {
             code.ArrowRight.pressed = false
     }
 })
+
