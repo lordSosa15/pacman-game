@@ -67,7 +67,7 @@ class Player {
 }
 
 class Ghost {
-    static velocity = 2
+    static velocity = 2 //static so i can chage the speed in easily
     constructor({position, speed, color = 'red'}){
         this.position = position
         this.speed = speed 
@@ -130,6 +130,8 @@ class PowerUp {
 const candies = []
 const mazeBoundaries = []
 const powerUps = []
+
+
 // ghost location, speed, look
 const ghosts = [
     new Ghost ({
@@ -399,7 +401,7 @@ map.forEach((row, i) => {
                         x: Maze.width * j,
                         y: Maze.height * i
                         },
-                        image: createImage('./images/pipeConnectorLeft.png')
+                        image: createImage('../images/pipeConnectorLeft.png')
                     })
                 )
                 break    
@@ -410,7 +412,7 @@ map.forEach((row, i) => {
                             x: Maze.width * j + Maze.width/2,
                             y: Maze.height * i + Maze.height/2
                             },
-                            image: createImage('./images/candy.png')
+                            image: createImage('../images/candy.png')
                         })
                     )
                     break 
@@ -442,11 +444,11 @@ function animate(){
     animationId = requestAnimationFrame(animate)
     context.clearRect(0,0, canvas.width, canvas.height)
 
-    if (gameFrame % 10 === 0 && playerState !== 'idle') {
-        playerFrame++
-        sx = playerFrame % 4 //4 represents how many sprite images in a row
-        //sy = Math.floor((playerFrame / 4) % 1) //16 represents total image in a sprite and 4 represnts num of images in a column
-    }
+    // if (gameFrame % 10 === 0 && playerState !== 'idle') {
+    //     playerFrame++
+    //     sx = playerFrame % 4 //4 represents how many sprite images in a row
+    //     //sy = Math.floor((playerFrame / 4) % 1) //16 represents total image in a sprite and 4 represnts num of images in a column
+    // }
     gameFrame++
     // need to track & update the last key pressed and keep movement consistent
     if (code.ArrowUp.pressed && lastKey === 'ArrowUp') {
@@ -455,7 +457,7 @@ function animate(){
         if(collision({
             circle: {...player, speed:{
                 x: 0,
-                y: -5
+                y: -2
             }},
             rectangle: maze
         })
@@ -463,7 +465,7 @@ function animate(){
             player.speed.y = 0
             break
         } else {
-            player.speed.y = -5
+            player.speed.y = -2
         }
     }
     } else if (code.ArrowLeft.pressed && lastKey === 'ArrowLeft'){
@@ -471,7 +473,7 @@ function animate(){
             const maze = mazeBoundaries[i]
          if(collision({
              circle: {...player, speed:{
-                 x: -5,
+                 x: -2,
                  y: 0
              }},
              rectangle: maze
@@ -480,7 +482,7 @@ function animate(){
              player.speed.x = 0
              break
          } else {
-             player.speed.x = -5
+             player.speed.x = -2
          }
      }
     } else if (code.ArrowDown.pressed && lastKey === 'ArrowDown'){
@@ -489,7 +491,7 @@ function animate(){
          if(collision({
              circle: {...player, speed:{
                  x: 0,
-                 y: 5
+                 y: 2
              }},
              rectangle: maze
          })
@@ -497,7 +499,7 @@ function animate(){
              player.speed.y = 0
              break
          } else {
-             player.speed.y = 5
+             player.speed.y = 2
          }
      }
     }
@@ -506,7 +508,7 @@ function animate(){
             const maze = mazeBoundaries[i]
          if(collision({
              circle: {...player, speed:{
-                 x: 5,
+                 x: 2,
                  y: 0
              }
             },
@@ -516,7 +518,7 @@ function animate(){
              player.speed.x = 0
              break
          } else {
-             player.speed.x = 5
+             player.speed.x = 2
          }
      }
     }
@@ -535,18 +537,22 @@ function animate(){
             if(ghost.scared){
                 ghosts.splice(i, 1)
             } else {
-
-            
-            cancelAnimationFrame(animationId)
-        }}
+             cancelAnimationFrame(animationId) 
+             alert("GAME OVER  refresh to restart")}
+  }
     }
     
     // win condition
     if (candies.length === 0){
         cancelAnimationFrame(animationId)
+        alert("YOU WIN!")
+        // context.fillRect(0,0,this.canvas.width, this.canvas.height)
+        //     context.font = "70px arial"
+        //     context.fillStyle ="red";
+        //     context.fillText("YOU WIN!", 50,300)
     }
-
-    // powerUps location
+    
+    // powerUps
     for (let i = powerUps.length - 1; 0 <= i; i--){
         const powerUp = powerUps[i]
         powerUp.draw()
